@@ -1,0 +1,9 @@
+.GistContainer .SearchBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.GistContainer .GistList {
+    margin-top: 4em;
+}
