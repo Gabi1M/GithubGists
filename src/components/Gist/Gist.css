@@ -1,0 +1,111 @@
+.Gist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 0.3em;
+    background-color: #515661;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Gist .header {
+    margin-top: 1em;
+    width: 98%;
+}
+
+.Gist .header .gistInformation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Gist .header .gistInformation .description {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.Gist .header .gistInformation .dates {
+    display: flex;
+    font-size: 0.9em;
+}
+
+.Gist .header p {
+    color: white;
+    padding: 0.2em 0.7em;
+}
+
+.Gist .header .information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Gist .header .information .ownerInformation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7em 0.7em 0em 0.7em;
+}
+
+.Gist .header .information .ownerInformation img {
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    transition: transform 200ms ease-in;
+}
+
+.Gist .header .information .ownerInformation img:hover {
+    transform: scale(1.2);
+}
+
+.Gist .header .information .ownerInformation p {
+    display: flex;
+    font-weight: 500;
+    font-size: 1.5em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Gist .header .information .forkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Gist .header .information .forkContainer .forkIcon {
+    color: white;
+    font-size: 2em;
+    padding: 0.5em 0em 0em 0em;
+}
+
+.Gist .header .information .forkInformation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7em 0.7em 0em 0.7em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.5em;
+}
+
+.Gist .header .information .forkInformation img {
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    transition: transform 200ms ease-in;
+}
+
+.Gist .header .information .forkInformation img:hover {
+    transform: scale(1.2);
+}
+
+.Gist .snippets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-width: 100%;
+}
