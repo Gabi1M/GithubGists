@@ -11,16 +11,9 @@ export const useFetch = (withAuth) => {
             try {
                 if (url !== null) {
                     if (withAuth) {
-                        axios
-                            .get(url, {
-                                headers: {
-                                    Authorization:
-                                        'token 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',
-                                },
-                            })
-                            .then((res) => {
-                                setResponse(res.data);
-                            });
+                        axios.get(url).then((res) => {
+                            setResponse(res.data);
+                        });
                     } else {
                         axios.get(url).then((res) => {
                             setResponse(res.data);
