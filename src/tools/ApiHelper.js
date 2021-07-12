@@ -15,7 +15,7 @@ export const useFetch = (withAuth) => {
                             .get(url, {
                                 headers: {
                                     Authorization:
-                                        'token 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',
+                                        'token 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',
                                 },
                             })
                             .then((res) => {

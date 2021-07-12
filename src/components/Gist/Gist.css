@@ -109,3 +109,29 @@
     max-width: 100%;
     min-width: 100%;
 }
+
+.Gist .snippets .buttonContainter {
+    display: flex;
+    justify-content: center;
+}
+
+.Gist .snippets .buttonContainter .showContentButton {
+    margin-bottom: 1em;
+    border: none;
+    color: grey;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.Gist .snippets .buttonContainter .showContentButton:hover {
+    color: white;
+    transform: scale(1.1);
+}

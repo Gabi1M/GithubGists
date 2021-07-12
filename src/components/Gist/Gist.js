@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Gist.css';
+import Snippet from '../Snippet/Snippet';
 import { useGlobalContext } from '../../tools/GlobalContext';
 import { useFetch } from '../../tools/ApiHelper';
 import { CgGitFork } from 'react-icons/cg';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 const Gist = (props) => {
     const [forks, setForks] = useState([]);
+    const [showContent, setShowContent] = useState(false);
     const { response, setUrl } = useFetch(true);
 
     useEffect(() => {
@@ -15,6 +18,10 @@ const Gist = (props) => {
         }
     }, [props.forksUrl, response]);
     const { username } = useGlobalContext();
+
+    const showContentToggle = () => {
+        setShowContent(!showContent);
+    };
 
     return (
         <div className={classes.Gist}>
@@ -56,7 +63,39 @@ const Gist = (props) => {
                     </div>
                 </div>
             </div>
-            <div className={classes.snippets}></div>
+            <div className={classes.snippets}>
+                <div className={classes.buttonContainter}>
+                    {showContent ? (
+                        <button
+                            className={classes.showContentButton}
+                            onClick={showContentToggle}
+                        >
+                            <MdKeyboardArrowUp></MdKeyboardArrowUp>
+                            Hide content
+                        </button>
+                    ) : (
+                        <button
+                            className={classes.showContentButton}
+                            onClick={showContentToggle}
+                        >
+                            Show content
+                            <MdKeyboardArrowDown></MdKeyboardArrowDown>
+                        </button>
+                    )}
+                </div>
+                {showContent
+                    ? props.files.map((item, index) => {
+                          return (
+                              <Snippet
+                                  key={index}
+                                  filename={item.filename}
+                                  language={item.language}
+                                  codeUrl={item.raw_url}
+                              />
+                          );
+                      })
+                    : null}
+            </div>
         </div>
     );
 };
