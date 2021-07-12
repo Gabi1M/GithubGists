@@ -1,0 +1,19 @@
+.GistList {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.GistList .noResult {
+    font-size: 30em;
+    color: rgba(0, 0, 0, 0.2);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
